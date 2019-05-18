@@ -16,5 +16,25 @@ namespace deneme.Views
         {
             InitializeComponent();
         }
+
+        private void BtnAdd_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnRetrive_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnUpdate_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void BtnDelete_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }
