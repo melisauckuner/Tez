@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="deneme.LoginPage">
+
+    <NavigationPage.TitleView>
+
+        <StackLayout BackgroundColor="Purple">
+            <StackLayout Orientation="Horizontal" BackgroundColor="Purple" WidthRequest="60" HeightRequest="60">
+             
+                <Image Source="slogan.png" HorizontalOptions="CenterAndExpand" WidthRequest="100" HeightRequest="100" BackgroundColor="Purple"/>
+            </StackLayout>
+        </StackLayout>
+    </NavigationPage.TitleView>
+   
+        <StackLayout BackgroundColor="MediumPurple" Padding="20" >
+         <Image Source="logo.png"  VerticalOptions= "Center" HeightRequest="100" WidthRequest="100"/>
+            <Label Text="Kampanya Nerede" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" TextColor="White"/>
+            <Label Text="Sen Orada" VerticalOptions="Center" HorizontalOptions="Center" FontSize="Medium" TextColor="White" />
+            <Label Text="Username" FontSize="Small" FontAttributes="Italic" TextColor="White" />
+            <Entry x:Name="txtuser" Placeholder="Username giriniz"  FontAttributes="Italic" FontSize="Small"  />
+            <Label Text="Password" FontSize="Small" FontAttributes="Italic" TextColor="White" />
+            <Entry x:Name="txtpassword" Placeholder="Password giriniz" FontAttributes="Italic" FontSize="Small" IsPassword="True" />
+        <Label Text="Category ID" FontSize="Small" FontAttributes="Italic" TextColor="White" />
+        <Entry x:Name="txtcategoryid" Placeholder="Category ID giriniz.(Cafe=1,Cosmetic=2,Clothing=3,Supermarket=4)" FontAttributes="Italic" FontSize="Small"  />
+
+
+        <Button Text="Login" TextColor="MediumPurple" BackgroundColor="White" HorizontalOptions="Center" BorderRadius="20" WidthRequest="250" Clicked="SignIn"/>
+            <Button Text="Login without being member" TextColor="White" Clicked="Login_Member" BackgroundColor="Purple"/>
+          
+
+            <Button Text="Sign Up" TextColor="MediumPurple"  BackgroundColor="White" HorizontalOptions="Center" BorderRadius="20"  Clicked="SignUp"/>
+
+             </StackLayout>
+
+         </ContentPage>
+      

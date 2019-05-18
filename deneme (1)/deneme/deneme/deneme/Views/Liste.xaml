@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="deneme.Views.Liste">
+
+    <NavigationPage.TitleView>
+        <StackLayout BackgroundColor="Purple">
+            <StackLayout Orientation="Horizontal" BackgroundColor="Purple" WidthRequest="60" HeightRequest="60">
+
+                <Image Source="cafeRest.png" HorizontalOptions="CenterAndExpand" WidthRequest="100" HeightRequest="100" BackgroundColor="Purple"/>
+            </StackLayout>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+
+    <ContentPage.Resources>
+
+        <ResourceDictionary>
+
+            <OnPlatform x:Key="Priority1" x:TypeArguments="x:Int32"
+
+      iOS="0"
+
+      Android="1"
+
+    />
+
+            <OnPlatform x:Key="Priority2" x:TypeArguments="x:Int32"
+
+      iOS="0"
+
+      Android="1"
+
+    />
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Hakkında" Priority="{StaticResource Priority1}" Order="Secondary" Clicked="MenuItem_OnClicked"/>
+
+        <ToolbarItem Text="Çıkış Yap" Priority="{StaticResource Priority2}" Order="Secondary" Clicked="MenuItem_OnClicked1"/>
+
+
+
+    </ContentPage.ToolbarItems>
+
+
+   
+
+
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" BackgroundColor="MediumPurple">
+
+        <ListView x:Name="lstView" ItemsSource="{Binding .}" SeparatorColor="White" ItemSelected="onSelected" RowHeight="75"  >
+
+            <ListView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <ViewCell>
+
+                        <StackLayout Orientation="Horizontal">
+
+                            <Image Source="{Binding ImageUrl}" HeightRequest="50" BackgroundColor="MediumPurple"></Image>
+
+                            <Label Text="{Binding Name}" TextColor="White" VerticalOptions="CenterAndExpand" ></Label>
+
+                            
+
+
+
+                        </StackLayout>
+
+                    </ViewCell>
+
+
+
+                </DataTemplate>
+
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+        </StackLayout>
+
+
+
+
+    </ContentPage.Content>
+</ContentPage>

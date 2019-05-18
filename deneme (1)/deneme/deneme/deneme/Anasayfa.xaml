@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:controls="clr-namespace:Xamd.ImageCarousel.Forms.Plugin.Abstractions;assembly=Xamd.ImageCarousel.Forms.Plugin.Abstractions"
+            x:Class="deneme.Anasayfa">
+
+
+
+
+    <NavigationPage.TitleView>
+
+        <StackLayout BackgroundColor="Purple">
+            <StackLayout Orientation="Horizontal" BackgroundColor="Purple" WidthRequest="60" HeightRequest="60">
+                <Image Source="logo.png" HorizontalOptions="Start" WidthRequest="60" HeightRequest="60" BackgroundColor="Purple"/>
+                <Image Source="slogan.png" HorizontalOptions="CenterAndExpand" WidthRequest="100" HeightRequest="100" BackgroundColor="Purple"/>
+            </StackLayout>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Resources>
+
+        <ResourceDictionary>
+
+            <OnPlatform x:Key="Priority1" x:TypeArguments="x:Int32"
+
+      iOS="0"
+
+      Android="1"
+
+    />
+
+            <OnPlatform x:Key="Priority2" x:TypeArguments="x:Int32"
+
+      iOS="0"
+
+      Android="1"
+
+    />
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Hakkında" Priority="{StaticResource Priority1}" Order="Secondary" Clicked="MenuItem_OnClicked"/>
+
+        <ToolbarItem Text="Çıkış Yap" Priority="{StaticResource Priority2}" Order="Secondary" Clicked="MenuItem_OnClicked1"/>
+
+
+
+    </ContentPage.ToolbarItems>
+
+
+
+    <StackLayout BackgroundColor="MediumPurple">   
+    
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+                <controls:ImageCarousel x:Name="imgSlider" HeightRequest="300" WidthRequest="300" />
+            </StackLayout>
+
+   
+    <StackLayout BackgroundColor="MediumPurple">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+
+
+            </Grid.ColumnDefinitions>
+            <ImageButton Source="cafe.png"  Grid.Column="0" Grid.Row="0" BackgroundColor="MediumPurple" Clicked="Click_Cafe"/>
+            <ImageButton Source="cosmetic.png"  Grid.Column="1" Grid.Row="0" BackgroundColor="MediumPurple" Clicked="Click_Cosmetic"/>
+            <ImageButton Source="clothes.png"  Grid.Column="0" Grid.Row="1" BackgroundColor="MediumPurple" Clicked="Click_Clothes"/>
+            <ImageButton Source="market.png"  Grid.Column="1" Grid.Row="1" BackgroundColor="MediumPurple" Clicked="Click_Market" />
+        </Grid>
+    </StackLayout>
+    </StackLayout>
+   
+</ContentPage>
+   

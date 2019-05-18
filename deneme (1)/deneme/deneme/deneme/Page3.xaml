@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="deneme.Page3">
+    <NavigationPage.TitleView>
+
+        <StackLayout BackgroundColor="Purple">
+            <StackLayout Orientation="Horizontal" BackgroundColor="Purple" WidthRequest="60" HeightRequest="60">
+
+                <Image Source="slogan.png" HorizontalOptions="CenterAndExpand" WidthRequest="100" HeightRequest="100" BackgroundColor="Purple"/>
+            </StackLayout>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Resources>
+
+        <ResourceDictionary>
+
+            <OnPlatform x:Key="Priority1" x:TypeArguments="x:Int32"
+
+      iOS="0"
+
+      Android="1"
+
+    />
+
+            <OnPlatform x:Key="Priority2" x:TypeArguments="x:Int32"
+
+      iOS="0"
+
+      Android="1"
+
+    />
+
+        </ResourceDictionary>
+
+    </ContentPage.Resources>
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem Text="Hakkında" Priority="{StaticResource Priority1}" Order="Secondary" Clicked="MenuItem_OnClicked"/>
+
+        <ToolbarItem Text="Çıkış Yap" Priority="{StaticResource Priority2}" Order="Secondary" Clicked="MenuItem_OnClicked1"/>
+
+
+
+    </ContentPage.ToolbarItems>
+
+
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="MediumPurple" Padding="100" >
+            <Image Source="clothes.png"  VerticalOptions= "Center" HeightRequest="100" WidthRequest="300"/>
+            <Picker Title="Semt Seçiniz" HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" TextColor="MediumPurple" WidthRequest="250" >
+                <Picker.Items>
+                    <x:String>Odunpazarı(71 Evler Mah.)</x:String>
+                    <x:String>Odunpazarı(Akarbaşı Mah.)</x:String>
+                    <x:String>Tepebaşı(Eskibağlar Mah.)</x:String>
+                    <x:String>Tepebaşı(Yenibağlar Mah.)</x:String>
+                    <x:String>Tepebaşı(Hoşnudiye Mah.)</x:String>
+                    <x:String>Tepebaşı(Sazova Mah.)</x:String>
+                    <x:String>Tepebaşı(Yeşiltepe Mah.)</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button Text="Sonuçları Listele" TextColor="MediumPurple"  BackgroundColor="White" HorizontalOptions="Center" BorderRadius="20" Clicked="Clothes_Campaign" />
+        </StackLayout>
+
+
+    </ContentPage.Content>
+
+
+
+
+
+
+
+
+</ContentPage>

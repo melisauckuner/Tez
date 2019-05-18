@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="deneme.Form">
+
+    <NavigationPage.TitleView>
+
+        <StackLayout BackgroundColor="Purple">
+            <StackLayout Orientation="Horizontal" BackgroundColor="Purple" WidthRequest="60" HeightRequest="60">
+               
+                <Image Source="slogan.png" HorizontalOptions="CenterAndExpand" WidthRequest="100" HeightRequest="100" BackgroundColor="Purple"/>
+            </StackLayout>
+        </StackLayout>
+    </NavigationPage.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="MediumPurple" Padding="50" >
+            <Image Source="logo.png"  VerticalOptions= "Center" HeightRequest="100" WidthRequest="100"/>
+           
+
+
+
+            <Label Text="Username:" FontSize="Small" FontAttributes="Italic" TextColor="White"/>
+            <Entry Placeholder="Username Giriniz." x:Name="txtuser" FontAttributes="Italic" FontSize="Small" />
+            <Entry Placeholder="UserID"  x:Name="txtuserid"  FontAttributes="Italic" FontSize="Small" ></Entry>
+            <Label Text="Email:" FontSize="Small" FontAttributes="Italic" TextColor="White"/>
+            <Entry Placeholder="Email Giriniz." FontAttributes="Italic" FontSize="Small"/>
+            
+            <Label Text="Telephone Number:" FontSize="Small" FontAttributes="Italic" TextColor="White"/>
+            <Entry Placeholder="Telephone Number Giriniz." FontAttributes="Italic" FontSize="Small"/>
+          
+            <Label Text="Password:" FontSize="Small" FontAttributes="Italic" TextColor="White"/>
+            <Entry Placeholder="Password Giriniz." x:Name="txtpassword" FontAttributes="Italic" FontSize="Small" IsPassword="True"/>
+
+            <Button Text="Sign Up" BackgroundColor="White" TextColor="MediumPurple" BorderRadius="20" HorizontalOptions="Center" Clicked="Sign_Up"/>
+           
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

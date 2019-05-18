@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                x:Class="deneme.Cafe_Campaign">
+    <NavigationPage.TitleView>
+        <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="10">
+            <Image Source="Cafe-Restaurant.png" VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+    </NavigationPage.TitleView>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <OnPlatform x:Key="Priority1" x:TypeArguments="x:Int32"
+      iOS="0"
+      Android="1"
+    />
+            <OnPlatform x:Key="Priority2" x:TypeArguments="x:Int32"
+      iOS="0"
+      Android="1"
+    />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Hakkında" Priority="{StaticResource Priority1}" Order="Secondary" Clicked="MenuItem_OnClicked"/>
+        <ToolbarItem Text="Çıkış Yap" Priority="{StaticResource Priority2}" Order="Secondary" Clicked="MenuItem_OnClicked1"/>
+
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Orientation="Vertical" BackgroundColor="MediumPurple">
+      
+        <ListView x:Name="lstView" ItemsSource="{Binding .}" SeparatorColor="White"  RowHeight="75">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Image Source="{Binding ImageUrl}" HeightRequest="50"></Image>
+                            <Label Text="{Binding Description}" TextColor="White"  VerticalOptions="CenterAndExpand"></Label>
+
+
+                        </StackLayout>
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
