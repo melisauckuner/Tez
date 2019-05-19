@@ -22,7 +22,7 @@ namespace deneme.Droid
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             string dbPath = FileAccessHelper.GetLocalFilePath("people.db3");
-            LoadApplication(new App(dbPath));
+            LoadApplication(new App());
         }
     }
 }
